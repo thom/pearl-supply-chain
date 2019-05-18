@@ -101,5 +101,6 @@ npm run dev
 
 * Truffle v4.1.14 (core: 4.1.14)
 * Solidity v0.4.24 (solc-js)
+* Web3 v1.0.0-beta.55
 * Node v10.15.3
 * IPFS v0.4.20
