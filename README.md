@@ -91,6 +91,10 @@ In a separate terminal window, launch the DApp:
 npm run dev
 ```
 
+## Requirements
+
+Graded according to the [Project Rubric](https://review.udacity.com/#!/rubrics/1710/view).
+
 ## Built With
 
 * [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts
