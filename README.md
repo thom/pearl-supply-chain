@@ -35,7 +35,7 @@ The diagrams folder contains the UML diagrams for the supply chain.
 
 ### Classes diagram
 
-![Classes diagram](diagrams/Pearl_Supply_Chain_Classes_Diagram.png)
+![Classes diagram](diagrams/Pearl_Supply_Chain_Class_Diagram.png)
 
 ## Getting Started
 
