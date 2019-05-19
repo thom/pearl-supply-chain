@@ -7,16 +7,6 @@ This project implements a Pearl Supply Chain. See the following links for inform
 
 The Ethereum DApp demonstrates a Pearl Supply Chain flow between a seller and buyer. The user story is similar to any commonly used supply chain process. A seller can add items to the inventory system stored in the blockchain. A buyer can purchase such items from the inventory system. Additionally a seller can mark an item as shipped, and similarly a buyer can mark an item as received.
 
-The DApp User Interface when running should look like this:
-
-![truffle test](images/ftc_product_overview.png)
-
-![truffle test](images/ftc_farm_details.png)
-
-![truffle test](images/ftc_product_details.png)
-
-![truffle test](images/ftc_transaction_history.png)
-
 ## UML diagrams
 
 The diagrams folder contains the UML diagrams for the supply chain.
@@ -108,7 +98,59 @@ Your terminal should look something like this:
 
 ## Testing the DApp in the browser
 
-TODO
+Go to [http://localhost:3000/](http://localhost:3000/) to open the DApp in the browser:
+
+![DApp](images/dapp.png)
+
+Import the following ganache-cli accounts into MetaMask:
+* Contract Owner
+  - ```accounts[0]): 0x27d8d15cbc94527cadf5ec14b69519ae23288b95```
+* Pearl Farmer
+  - ```accounts[1]: 0x018c2dabef4904ecbd7118350a0c54dbeae3549a```
+* Distributor
+  - ```accounts[2]: 0xce5144391b4ab80668965f2cc4f2cc102380ef0a```
+* Retailer
+  - ```accounts[3]: 0x460c31107dd048e34971e57da2f99f659add4f02```
+* Consumer
+  - ```accounts[4]: 0xd37b7b8c62be2fdde8daa9816483aebdbd356088```
+
+You have to use the accounts' private keys to do so. Now connect to the contract owner account and register the other accounts in the DApp:
+
+![DApp](images/dapp_register_actor.png)
+
+The transaction history should look like this:
+
+```
+FarmerAdded - 0x180b83da33fbcebfdddca581c31e6dbbff466834904d08642a4615601998ab1c
+DistributorAdded - 0xae1cc116e23d62a226074885408c0f03b99c1df1cb615daf27454e460a1d9555
+RetailerAdded - 0x35f69a18fae180d5545e458e855931ab566a6c9048919dafb3109d23cf6bbdfe
+ConsumerAdded - 0xf80b2e21944206079eff0f736cf8d48060531dc881171997e26d2031d3c7c71e
+```
+
+Now select the Pearl Farmer account in MetaMask to harvest, process, pack and put the pearls up for sale:
+
+![DApp](images/dapp_farmer.png)
+
+Afterwards, selec the Distributor account in MetaMask to buy the pearls. Back with the Farmer account, you can now ship the pearls. With the Retailer account, you can then receive the pearls. And finally with the Consumer account, the pearls can be purchased.
+
+![DApp](images/dapp_distribution.png)
+
+The transaction history should look like this now:
+
+```
+FarmerAdded - 0x180b83da33fbcebfdddca581c31e6dbbff466834904d08642a4615601998ab1c
+DistributorAdded - 0xae1cc116e23d62a226074885408c0f03b99c1df1cb615daf27454e460a1d9555
+RetailerAdded - 0x35f69a18fae180d5545e458e855931ab566a6c9048919dafb3109d23cf6bbdfe
+ConsumerAdded - 0xf80b2e21944206079eff0f736cf8d48060531dc881171997e26d2031d3c7c71e
+Harvested - 0x546bc513360f4f203d020211f3066328723b7e2b579afbfe676e5ad264c23235
+Processed - 0xb4edf072fbcd4a852a21cfb61f246c63fb9eec6e6ef49c61f25c5e7886c74ee8
+Packed - 0x5dafead1d1e5d7bace33494de7bfaa5d98928e8667e794469cd84c222dc7aab3
+ForSale - 0x229d2f80621ab17c133fdc9c36d122a78c14b5438e79f79733bbaf1252c450e3
+Sold - 0x5d634376ba265a78de638698e75450ee18c590cfbc9d8af7eab0940a633b3eb6
+Shipped - 0xf0d46fddb8ad7e685d525df1eb674bf67c1a3704124778abb56f6b3e4885ac3d
+Received - 0x839ad07ffce331f32b3b289f7729ede17c64aa6fd3397e13e96bce9b74486fd6
+Purchased - 0x0d170d901916c53caaec935b47e3af6db1d5ba9aee9e0f3ae108c7534a74a5f3
+```
 
 ## Deploy smart contract on a public test network (Rinkeby)
 
@@ -116,7 +158,7 @@ The smart contract is deployed on the Ethereum Rinkeby test network:
 * Transaction ID: 0x249331471a3aa5d275049cc1aae29d45449cd1ebfbc7404fd33e198d5e8cebed
 * Contract address: 0xc099d8128f57f4b02d2d4aa9d8d2678a119db26f
 
-``
+```
 [thom@marvin project-7]$ truffle migrate -f 2 --network rinkeby --reset --compile-all
 Compiling ./contracts/Migrations.sol...
 Compiling ./contracts/PearlAccessControl/ConsumerRole.sol...
@@ -147,7 +189,7 @@ Running migration: 2_deploy_contracts.js
   ... 0x249331471a3aa5d275049cc1aae29d45449cd1ebfbc7404fd33e198d5e8cebed
   SupplyChain: 0xc099d8128f57f4b02d2d4aa9d8d2678a119db26f
 Saving artifacts...
-``
+```
 
 You can [view the contract in Etherscan](https://rinkeby.etherscan.io/address/0xc099d8128f57f4b02d2d4aa9d8d2678a119db26f#code).
 
