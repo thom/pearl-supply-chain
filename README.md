@@ -104,7 +104,7 @@ Go to [http://localhost:3000/](http://localhost:3000/) to open the DApp in the b
 
 Import the following ganache-cli accounts into MetaMask:
 * Contract Owner
-  - ```accounts[0]): 0x27d8d15cbc94527cadf5ec14b69519ae23288b95```
+  - ```accounts[0]: 0x27d8d15cbc94527cadf5ec14b69519ae23288b95```
 * Pearl Farmer
   - ```accounts[1]: 0x018c2dabef4904ecbd7118350a0c54dbeae3549a```
 * Distributor
@@ -114,7 +114,7 @@ Import the following ganache-cli accounts into MetaMask:
 * Consumer
   - ```accounts[4]: 0xd37b7b8c62be2fdde8daa9816483aebdbd356088```
 
-You have to use the accounts' private keys to do so. Now connect to the contract owner account and register the other accounts in the DApp:
+You have to use the accounts' private keys to do so. Now connect to the Contract Owner account and register the other accounts in the DApp:
 
 ![DApp](images/dapp_register_actor.png)
 
@@ -131,7 +131,7 @@ Now select the Pearl Farmer account in MetaMask to harvest, process, pack and pu
 
 ![DApp](images/dapp_farmer.png)
 
-Afterwards, selec the Distributor account in MetaMask to buy the pearls. Back with the Farmer account, you can now ship the pearls. With the Retailer account, you can then receive the pearls. And finally with the Consumer account, the pearls can be purchased.
+Afterwards, select the Distributor account in MetaMask to buy the pearls. Back with the Farmer account, you can now ship the pearls. With the Retailer account, you can then receive the pearls. And finally with the Consumer account, the pearls can be purchased.
 
 ![DApp](images/dapp_distribution.png)
 
