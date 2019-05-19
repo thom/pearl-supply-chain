@@ -2,10 +2,9 @@ pragma solidity ^0.4.24;
 
 // Import the library 'Roles'
 import "./Roles.sol";
-import "../PearlCore/Ownable.sol";
 
 // Define a contract 'ConsumerRole' to manage this role - add, remove, check
-contract ConsumerRole is Ownable {
+contract ConsumerRole {
   using Roles for Roles.Role;
 
   // Define 2 events, one for Adding, and other for Removing

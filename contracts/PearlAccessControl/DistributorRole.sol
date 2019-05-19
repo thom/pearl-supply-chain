@@ -2,7 +2,6 @@ pragma solidity ^0.4.24;
 
 // Import the library 'Roles'
 import "./Roles.sol";
-import "../PearlCore/Ownable.sol";
 
 // Define a contract 'DistributorRole' to manage this role - add, remove, check
 contract DistributorRole {
