@@ -19,11 +19,23 @@ The DApp User Interface when running should look like this:
 
 ## UML diagrams
 
-The diagrams folder contains the UML diagrams for the supply chain:
-* Activity diagram
-* Sequence diagram
-* State diagram
-* Classes diagram
+The diagrams folder contains the UML diagrams for the supply chain.
+
+### Activity diagram
+
+![Activity diagram](diagrams/Pearl Supply Chain - Activity Diagram.png)
+
+### Sequence diagram
+
+![Sequence diagram](diagrams/Pearl Supply Chain - Sequence Diagram.png)
+
+### State diagram
+
+![State diagram](diagrams/Pearl Supply Chain - State Diagram.png)
+
+### Classes diagram
+
+![Classes diagram](diagrams/Pearl Supply Chain - Classes Diagram.png)
 
 ## Getting Started
 
@@ -98,7 +110,6 @@ Graded according to the [Project Rubric](https://review.udacity.com/#!/rubrics/1
 ## Built With
 
 * [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts
-* [IPFS](https://ipfs.io/) - IPFS is the Distributed Web | A peer-to-peer hypermedia protocol to make the web faster, safer, and more open.
 * [Truffle Framework](http://truffleframework.com/) - Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.
 
 ## Versions
@@ -107,4 +118,3 @@ Graded according to the [Project Rubric](https://review.udacity.com/#!/rubrics/1
 * Solidity v0.4.24 (solc-js)
 * Web3 v1.0.0-beta.55
 * Node v10.15.3
-* IPFS v0.4.20
