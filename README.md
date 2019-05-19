@@ -43,7 +43,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Please make sure you've already installed ganache-cli, Truffle and enabled MetaMask extension in your browser.
+Please make sure you've already installed ganache-cli, Truffle and enabled the MetaMask extension in your browser.
 
 ### Installing
 
@@ -63,9 +63,9 @@ ganache-cli -m "spirit supply whale amount human item harsh scare congress disco
 
 Your terminal should look something like this:
 
-![truffle test](images/ganache-cli.png)
+![ganache-cli](images/ganache-cli.png)
 
-In a separate terminal window, Compile smart contracts:
+In a separate terminal window, compile the smart contracts:
 
 ```
 truffle compile
@@ -73,9 +73,9 @@ truffle compile
 
 Your terminal should look something like this:
 
-![truffle test](images/truffle_compile.png)
+![truffle compile](images/truffle_compile.png)
 
-This will create the smart contract artifacts in folder ```build\contracts```.
+This will create the smart contract artifacts in folder ```build/contracts```.
 
 Migrate smart contracts to the locally running blockchain, ganache-cli:
 
@@ -85,7 +85,7 @@ truffle migrate
 
 Your terminal should look something like this:
 
-![truffle test](images/truffle_migrate.png)
+![truffle migrate](images/truffle_migrate.png)
 
 Test smart contracts:
 
@@ -93,7 +93,7 @@ Test smart contracts:
 truffle test
 ```
 
-All 10 tests should pass.
+All 11 tests should pass.
 
 ![truffle test](images/truffle_test.png)
 
@@ -102,6 +102,54 @@ In a separate terminal window, launch the DApp:
 ```
 npm run dev
 ```
+Your terminal should look something like this:
+
+![npm run dev](images/npm_run_dev.png)
+
+## Testing the DApp in the browser
+
+TODO
+
+## Deploy smart contract on a public test network (Rinkeby)
+
+The smart contract is deployed on the Ethereum Rinkeby test network:
+* Transaction ID: 0x249331471a3aa5d275049cc1aae29d45449cd1ebfbc7404fd33e198d5e8cebed
+* Contract address: 0xc099d8128f57f4b02d2d4aa9d8d2678a119db26f
+
+``
+[thom@marvin project-7]$ truffle migrate -f 2 --network rinkeby --reset --compile-all
+Compiling ./contracts/Migrations.sol...
+Compiling ./contracts/PearlAccessControl/ConsumerRole.sol...
+Compiling ./contracts/PearlAccessControl/DistributorRole.sol...
+Compiling ./contracts/PearlAccessControl/PearlFarmerRole.sol...
+Compiling ./contracts/PearlAccessControl/RetailerRole.sol...
+Compiling ./contracts/PearlAccessControl/Roles.sol...
+Compiling ./contracts/PearlBase/SupplyChain.sol...
+Compiling ./contracts/PearlCore/Ownable.sol...
+Writing artifacts to ./build/contracts
+
+Using network 'rinkeby'.
+
+Running migration: 2_deploy_contracts.js
+  Deploying PearlFarmerRole...
+  ... 0x9d46b1ed4233d03ee17a5c51170e773cc898f35e8e72cfdf62ed233a76379c48
+  PearlFarmerRole: 0x770af6ae70c6b91fbece99248ed02e11f7e1c46d
+  Deploying DistributorRole...
+  ... 0x32e3b2017cdaa0be35360b942c20b32b74924da151bd9a7c9b247f6e1d24ce03
+  DistributorRole: 0x4e3ccf23416fce6a281a72f965f8cf822035557a
+  Deploying RetailerRole...
+  ... 0x81bfe536f2d28b98f5de2c8fc225c2098c5ea67626650e2d995173c42a0e9cde
+  RetailerRole: 0xfcdec3967b916db509d041166ae6960354c163c5
+  Deploying ConsumerRole...
+  ... 0xc9cb791b0b767099e74c12a77def9f6087cfc6914450f94a8e7bf63bf30e7309
+  ConsumerRole: 0x7b2d8a2c961982dffb8402ec6770a6f4e593d9c4
+  Deploying SupplyChain...
+  ... 0x249331471a3aa5d275049cc1aae29d45449cd1ebfbc7404fd33e198d5e8cebed
+  SupplyChain: 0xc099d8128f57f4b02d2d4aa9d8d2678a119db26f
+Saving artifacts...
+``
+
+You can [view the contract in Etherscan](https://rinkeby.etherscan.io/address/0xc099d8128f57f4b02d2d4aa9d8d2678a119db26f#code).
 
 ## Requirements
 
