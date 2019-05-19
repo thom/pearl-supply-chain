@@ -21,7 +21,7 @@ contract PearlFarmerRole {
 
   // Define a modifier that checks to see if msg.sender has the appropriate role
   modifier onlyFarmer() {
-    require(isFarmer(msg.sender));
+    require(isFarmer(msg.sender), "Caller is not a pearl farmer.");
     _;
   }
 
