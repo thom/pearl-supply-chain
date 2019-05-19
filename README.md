@@ -23,19 +23,19 @@ The diagrams folder contains the UML diagrams for the supply chain.
 
 ### Activity diagram
 
-![Activity diagram](diagrams/Pearl Supply Chain - Activity Diagram.png)
+![Activity diagram](diagrams/Pearl_Supply_Chain_Activity_Diagram.png)
 
 ### Sequence diagram
 
-![Sequence diagram](diagrams/Pearl Supply Chain - Sequence Diagram.png)
+![Sequence diagram](diagrams/Pearl_Supply_Chain_Sequence_Diagram.png)
 
 ### State diagram
 
-![State diagram](diagrams/Pearl Supply Chain - State Diagram.png)
+![State diagram](diagrams/Pearl_Supply_Chain_State_Diagram.png)
 
 ### Classes diagram
 
-![Classes diagram](diagrams/Pearl Supply Chain - Classes Diagram.png)
+![Classes diagram](diagrams/Pearl_Supply_Chain_Classes_Diagram.png)
 
 ## Getting Started
 
