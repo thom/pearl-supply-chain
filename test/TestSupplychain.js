@@ -9,8 +9,8 @@ contract('SupplyChain', function(accounts) {
 
     const ownerID = accounts[0]
     const originFarmerID = accounts[1]
-    const originFarmName = "Juan De La Cruz"
-    const originFarmInformation = "Golden Pearl Farm"
+    const originFarmName = "Golden Pearl Farm"
+    const originFarmInformation = "Owner: Juan De La Cruz"
     const originFarmLatitude = "11.849628"
     const originFarmLongitude = "119.886369"
     var productID = sku + upc
