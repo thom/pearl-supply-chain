@@ -1,4 +1,4 @@
-# Project 7: Ethereum DApp for Tracking Items through Supply Chain
+# Udacity Blockchain Developer Nanodegree Program - Project 7: Ethereum DApp for Tracking Items through Supply Chain
 
 This project implements a Pearl Supply Chain. See the following links for information on cultured pearls and oyster farming:
 * https://en.m.wikipedia.org/wiki/Cultured_pearl
