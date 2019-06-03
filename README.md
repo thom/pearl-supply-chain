@@ -37,8 +37,6 @@ Please make sure you've already installed ganache-cli, Truffle and enabled the M
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development environment running.
-
 Clone this repository and install all requisite npm packages (as listed in ```package.json```):
 
 ```
